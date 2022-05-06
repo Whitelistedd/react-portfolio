@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import {mobile} from "../MediaQueries"
 
 const Container = styled.div`
   display: flex;
@@ -20,6 +21,7 @@ const Container = styled.div`
       margin: 0px auto;
       background-color: white;
   }
+  ${mobile({display: "none"})}
 `
 
 const Anchor = styled.a`
@@ -41,7 +43,7 @@ writing-mode: vertical-rl;
 export const RightSide = () => {
   return (
     <Container>
-      <Anchor href="mailto:ismonovmukh@gmail.com">
+      <Anchor href="mailto:Volxen@gmail.com">
         <Email>ismonovmukh@gmail.com</Email>
       </Anchor>
     </Container>

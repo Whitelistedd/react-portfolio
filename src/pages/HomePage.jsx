@@ -4,7 +4,9 @@ import {AboutMe} from "../components/AboutMe"
 import { LeftSide } from "../components/LeftSide";
 import { RightSide } from "../components/RightSide";
 import styled from "styled-components";
-import { Experience } from "../components/Experience";
+import { Work } from "../components/Work";
+import { BottomNav } from "../components/BottomNav";
+import { Contact } from "../components/Contact";
 
 const Container = styled.div`
     height: 500vh;
@@ -15,10 +17,12 @@ export const HomePage = () => {
     <Container>
       <Navbar />
       <RightSide />
+      <BottomNav />
       <Introduction />
       <LeftSide />
       <AboutMe />
-      <Experience />
+      <Work />
+      <Contact />
     </Container>
   );
 }

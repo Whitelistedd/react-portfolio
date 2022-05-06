@@ -1,6 +1,7 @@
 import { GitHub, LinkedIn } from '@mui/icons-material'
 import React from 'react'
 import styled from 'styled-components'
+import {mobile} from "../MediaQueries"
 
 const Container = styled.div`
     display: flex;
@@ -20,6 +21,7 @@ const Container = styled.div`
         margin: 0px auto;
         background-color: white;
     }
+    ${mobile({display: "none"})}
 `
 
 const Anchor = styled.a`
