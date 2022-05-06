@@ -2,7 +2,17 @@ import React from 'react'
 import styled from 'styled-components'
 import codingIMG from "../images/Saly-10.svg"
 import { mobile } from '../MediaQueries'
+import HTML5 from "../images/html5-brands.svg"
+import CSS from "../images/css3-alt-brands.svg"
+import JS from "../images/js-brands.svg"
+import GIT from "../images/git-alt-brands.svg"
+import MongoDB from "../images/mongoDB.svg"
+import NODE from "../images/node-js-brands.svg"
+import REACT from "../images/react-brands.svg"
+import TS from "../images/typescript.svg"
 import Aos from 'aos';
+
+const languages = [HTML5,CSS,JS,GIT,TS,MongoDB,NODE,REACT]
 
 const Container = styled.section`
     display:flex;
@@ -61,6 +71,16 @@ const Image = styled.img`
     ${mobile({maxWidth: "40vw"})}
 `
 
+const Images = styled.div`
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+`
+
+const Language = styled.img`
+    width: 30px;
+`
+
 export const AboutMe = () => {
 
     Aos.init();
@@ -82,12 +102,15 @@ export const AboutMe = () => {
                     Hello! My name is Muhammad and I enjoy creating things that live on the internet. 
                     </StyledP>
                     <StyledP>
-                    I fell in love with web development and coding in 2020 and since i have been learning 24/7 to fully master HTML / CSS/ JS and most importantly for me is React
-                    My main focus these days is building nice and clean websites with ReactJS and TS.
+                    I fell in love with web development and coding in 2020 and since i have been learning 24/7 to fully master HTML / CSS/ JS, mostly i work with React
+                    and my main focus these days is building nice and clean websites with ReactJS and TS.
                     </StyledP>
                     <StyledP>
                     I am looking forward to work with any company and push the company forward with new technologies and new languages
                     </StyledP>
+                    <Images>
+                        {languages.map(item => <Language src={item} />)}
+                    </Images>
                 </Info>
                 <Image src={codingIMG} />
             </Wrap>

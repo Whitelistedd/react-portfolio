@@ -15,28 +15,8 @@ const Info = styled.div``
 
 const Title = styled.h3`
     opacity: 0.9;
-    font-size: 30px;
+    font-size: 2.3rem;
     color: #65FFDB;
-    &::after {
-        content: "";
-        display: inline-block;
-        position: relative;
-        top: -5px;
-        margin-left: 20px;
-        width: calc(40vw - 5em);
-        height: 1px;
-        background-color: #65FFDB;
-    }
-    &::before {
-        content: "";
-        display: inline-block;
-        position: relative;
-        top: -5px;
-        margin-right: 20px;
-        width: calc(40vw - 5em);
-        height: 1px;
-        background-color: #65FFDB;
-    }
 `
 
 const CardOne = styled.div`
@@ -76,7 +56,7 @@ const CardTitle = styled.h4`
 const Projects = styled.div`
     display: flex;
     gap: 5em;
-    width: 80vw;
+    width: 60vw;
     flex-direction: column;
     ${CardOne}, ${CardTwo}, ${CardThree}{
         border-radius: 15px;
