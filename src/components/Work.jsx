@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-
+import Aos from 'aos';
 
 const Container = styled.section`
     display:flex;
@@ -33,7 +33,7 @@ const CardContent = styled.div`
     flex-direction: column;
     justify-content: flex-end;
     padding: 1em 1em;
-    transform: translateY(140%);
+    transform: translateY(50%);
     transition: 600ms ease;
     height: 45vh;
     width: 100%;
@@ -109,67 +109,94 @@ const Button = styled.button`
 `
 
 export const Work = () => {
-  return (
-    <Container id='Work'
-    data-aos="fade-up"
-    data-aos-offset="400"
-    data-aos-delay="0"
-    data-aos-duration="500"
-    data-aos-easing="ease-in-out"
-    data-aos-mirror="false"
-    data-aos-once="false"
-    >
-        <Info>
-            <Title>My Main Projects</Title>
-        </Info>
-        <Projects>
-            <CardOne>
-                <CardContent>
-                    <CardTitle>Base Ecommerce</CardTitle>
-                    <CardDesc>
-                        In this project I have made a MERN React website for a company called Base, I added a payment system, cart system and filtering.
-                    </CardDesc>
-                    <CardDesc>
-                        For this Project I used <HL>ReactJS</HL> , <HL>Redux</HL>, <HL>Styled-Components</HL> and
-                        a backend REST API made with <HL>Node</HL>, <HL>ExpressJS</HL> and <HL>MongoDB</HL>.
-                        </CardDesc>
-                    <Button>View Project</Button>
-                </CardContent>
-            </CardOne>
-            <CardTwo>
-                <CardContent>
-                    <CardTitle>Reddit Clone</CardTitle>
-                    <CardDesc>
-                        In this project have went and created a group of friends to make a advanced reddit clone so
-                        not just the homepage but way more features then that.
-                    </CardDesc>
-                    <CardDesc>
-                        For this Project We used <HL>ReactJS</HL>, <HL>React-router</HL>, <HL>MaterialUI</HL>,
-                        <HL> Styled-Components</HL>, <HL>Redux</HL> and <HL>Git</HL> to manage and organize between the team.
-                    </CardDesc>
-                    <Button>View Project</Button>
-                </CardContent>
-            </CardTwo>
-            <CardThree>
-                <CardContent>
-                    <CardTitle>Adopt A pet</CardTitle>
-                    <CardDesc>
-                        In this project I used React.JS and a REST API, I fetched data 
-                        from a pet api and displayed them on the screen, it will show the name of the name of the pet and the description
-                        of the pet and other information.
-                    </CardDesc>
-                    <CardDesc>
-                        For this Project I used <HL>ReactJS</HL>, <HL>React-Router</HL> and <HL>CSS</HL> with a API to fetch the animals that are available.
-                    </CardDesc>
-                    <Button>View Project</Button>
-                </CardContent>
-            </CardThree>
-        </Projects>
-       {/*  <OtherContainer>
-            <SmallProjectOne>
 
-            </SmallProjectOne>
-        </OtherContainer> */}
-    </Container>
-  )
+    Aos.init();
+
+    return (
+        <Container id='Work'
+        data-aos="fade-up"
+        data-aos-offset="400"
+        data-aos-delay="0"
+        data-aos-duration="500"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="false"
+        data-aos-once="false"
+        >
+            <Info>
+                <Title>My Main Projects</Title>
+            </Info>
+            <Projects>
+                <CardOne
+                data-aos="fade-up"
+                data-aos-offset="400"
+                data-aos-delay="0"
+                data-aos-duration="500"
+                data-aos-easing="ease-in-out"
+                data-aos-mirror="false"
+                data-aos-once="false"
+                >
+                    <CardContent>
+                        <CardTitle>Base Ecommerce</CardTitle>
+                        <CardDesc>
+                            In this project I have made a MERN React website for a company called Base, I added a payment system, cart system and filtering.
+                        </CardDesc>
+                        <CardDesc>
+                            For this Project I used <HL>ReactJS</HL> , <HL>Redux</HL>, <HL>Styled-Components</HL> and
+                            a backend REST API made with <HL>Node</HL>, <HL>ExpressJS</HL> and <HL>MongoDB</HL>.
+                            </CardDesc>
+                        <Button>View Project</Button>
+                    </CardContent>
+                </CardOne>
+                <CardTwo
+                data-aos="fade-up"
+                data-aos-offset="410"
+                data-aos-delay="0"
+                data-aos-duration="500"
+                data-aos-easing="ease-in-out"
+                data-aos-mirror="false"
+                data-aos-once="false"
+                >
+                    <CardContent>
+                        <CardTitle>Reddit Clone</CardTitle>
+                        <CardDesc>
+                            In this project have went and created a group of friends to make a advanced reddit clone so
+                            not just the homepage but way more features then that.
+                        </CardDesc>
+                        <CardDesc>
+                            For this Project We used <HL>ReactJS</HL>, <HL>React-router</HL>, <HL>MaterialUI</HL>,
+                            <HL> Styled-Components</HL>, <HL>Redux</HL> and <HL>Git</HL> to manage and organize between the team.
+                        </CardDesc>
+                        <Button>View Project</Button>
+                    </CardContent>
+                </CardTwo>
+                <CardThree
+                data-aos="fade-up"
+                data-aos-offset="420"
+                data-aos-delay="0"
+                data-aos-duration="500"
+                data-aos-easing="ease-in-out"
+                data-aos-mirror="false"
+                data-aos-once="false"
+                >
+                    <CardContent>
+                        <CardTitle>Project 3</CardTitle>
+                        <CardDesc>
+                            In this project have went and created a group of friends to make a advanced reddit clone so
+                            not just the homepage but way more features then that.
+                        </CardDesc>
+                        <CardDesc>
+                            For this Project We used <HL>ReactJS</HL>, <HL>React-router</HL>, <HL>MaterialUI</HL>,
+                            <HL> Styled-Components</HL>, <HL>Redux</HL> and <HL>Git</HL> to manage and organize between the team.
+                        </CardDesc>
+                        <Button>View Project</Button>
+                    </CardContent>
+                </CardThree>
+            </Projects>
+        {/*  <OtherContainer>
+                <SmallProjectOne>
+
+                </SmallProjectOne>
+            </OtherContainer> */}
+        </Container>
+    )
 }
