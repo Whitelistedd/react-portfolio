@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+import Project1 from "../images/Base.svg"
+import Project2 from "../images/Reddit.svg"
 import Aos from 'aos';
 
 const Container = styled.section`
@@ -20,12 +22,19 @@ const Title = styled.h3`
 `
 
 const CardOne = styled.div`
+    background-image: url(${Project1});
+    background-repeat: no-repeat;
+    background-size: cover;
 `
 
 const CardTwo = styled.div`
+background-image: url(${Project2});
+background-repeat: no-repeat;
+background-size: cover;
 `
 
 const CardThree = styled.div`
+background-color: blue;
 `
 
 const CardContent = styled.div`
@@ -33,6 +42,7 @@ const CardContent = styled.div`
     flex-direction: column;
     justify-content: flex-end;
     padding: 1em 1em;
+    z-index: 1;
     transform: translateY(50%);
     transition: 600ms ease;
     height: 45vh;
@@ -40,9 +50,9 @@ const CardContent = styled.div`
     gap: 1em;
     background: 
     linear-gradient(
-        hsl(0 0% 0% / 0) 20%,
-        hsl(20 0% 0% / 0.5) 65%,
-        hsl(0 0% 0% / 0.7)
+        hsl(0 0% 0% / 0) 40%,
+        hsl(20 0% 0% / 0.7) 65%,
+        hsl(0 0% 0% / 1) 100%
       );
       color: white;
     ;
@@ -61,7 +71,6 @@ const Projects = styled.div`
     ${CardOne}, ${CardTwo}, ${CardThree}{
         border-radius: 15px;
         display: flex;
-        background-color: #032E74;
         min-width: 30vw;
         align-items: flex-end;
         height: 60vh;
