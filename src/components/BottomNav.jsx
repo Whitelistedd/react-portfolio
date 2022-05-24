@@ -45,10 +45,10 @@ export const BottomNav = () => {
         sx={{width: "100%", borderRadius: "50px",background: "#0A182E",border: "1px solid #65FFDB"}}
         showLabels
         >
-            <BottomNavigationAction onClick={() => window.location='#Introduction'} sx={{color: "white", "&:hover": {color: "#65FFDB"}}} icon={<Title>Home</Title>} />
-            <BottomNavigationAction onClick={() => window.location='#AboutMe'} sx={{color: "white", "&:hover": {color: "#65FFDB"}}} icon={<Title>About</Title>} />
-            <BottomNavigationAction onClick={() => window.location='#Work'} sx={{color: "white", "&:hover": {color: "#65FFDB"}}} icon={<Title>Work</Title>} />
-            <BottomNavigationAction onClick={() => window.location='#Contact'} sx={{color: "white", "&:hover": {color: "#65FFDB"}}} icon={<Title>Contact</Title>} />
+            <BottomNavigationAction onClick={() => window.location='#Introduction'} sx={{color: "white", "&:hover": {color: "#65FFDB"}}} icon={<Title>Дом</Title>} />
+            <BottomNavigationAction onClick={() => window.location='#AboutMe'} sx={{color: "white", "&:hover": {color: "#65FFDB"}}} icon={<Title>Обо мне</Title>} />
+            <BottomNavigationAction onClick={() => window.location='#Projects'} sx={{color: "white", "&:hover": {color: "#65FFDB"}}} icon={<Title>Работа</Title>} />
+            <BottomNavigationAction onClick={() => window.location='#Contact'} sx={{color: "white", "&:hover": {color: "#65FFDB"}}} icon={<Title>Контакт</Title>} />
         </BottomNavigation>
 
       </Wrap>

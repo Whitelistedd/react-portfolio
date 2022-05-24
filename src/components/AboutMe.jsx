@@ -11,14 +11,28 @@ import NODE from "../images/node-js-brands.svg"
 import REACT from "../images/react-brands.svg"
 import TS from "../images/typescript.svg"
 import Aos from 'aos';
+import {devices} from "../MediaQueries"
 
 const languages = [HTML5,CSS,JS,GIT,TS,MongoDB,NODE,REACT]
+
+const Title = styled.h3`
+    opacity: 0.9;
+    margin-bottom: 1em;
+    font-size: 30px;
+    color: #65FFDB;
+    ${mobile({"&::after":{width: "calc(78vw - 5em)"}})}
+`
 
 const Container = styled.section`
     display:flex;
     justify-content: center;
     height: 100vh;
     ${mobile({height: "110vh"})}
+    @media only screen and (max-width: ${devices.mobile}px) {
+        ${Title} {
+            font-size: 7vw;
+        }
+    }
 `
 
 const Wrap = styled.div`
@@ -37,14 +51,6 @@ const Info = styled.div`
     gap: 0.5em;
     width: 40vw;
     ${mobile({width: "80vw",alignItems: "center"})}
-`
-
-const Title = styled.h3`
-    opacity: 0.9;
-    margin-bottom: 1em;
-    font-size: 30px;
-    color: #65FFDB;
-    ${mobile({"&::after":{width: "calc(78vw - 5em)"}})}
 `
 
 const StyledP = styled.p`
@@ -97,16 +103,17 @@ export const AboutMe = () => {
         >
             <Wrap>
                 <Info>
-                    <Title>About Me</Title>
+                    <Title>Обо мне</Title>
                     <StyledP>
-                    Hello! My name is Muhammad and I enjoy creating things that live on the internet. 
+                    Привет! Меня зовут Мухаммед, и мне нравится создавать вещи, которые живут в Интернете.
                     </StyledP>
                     <StyledP>
-                    I fell in love with web development and coding in 2020 and since i have been learning 24/7 to fully master HTML / CSS/ JS, mostly i work with React
-                    and my main focus these days is building nice and clean websites with ReactJS and TS.
+                    Я влюбился в веб-разработку и кодирование в 2020 году, и с тех пор я учусь 24/7,
+                     чтобы полностью освоить HTML / CSS / JS, в основном я работаю с ReactJS / NextJS,
+                     и в эти дни я сосредоточен на создании красивых и чистых веб-сайтов с ReactJS. и TS.
                     </StyledP>
                     <StyledP>
-                    I am looking forward to work with any company and push the company forward with new technologies and new languages
+                    Я с нетерпением жду возможности работать с любой компанией и продвигать компанию вперед с помощью новых технологий и новых языков.
                     </StyledP>
                     <Images>
                         {languages.map(item => <Language src={item} />)}

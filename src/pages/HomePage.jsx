@@ -4,7 +4,7 @@ import {AboutMe} from "../components/AboutMe"
 import { LeftSide } from "../components/LeftSide";
 import { RightSide } from "../components/RightSide";
 import styled from "styled-components";
-import { Work } from "../components/Work";
+import { Projects } from "../components/Projects";
 import { BottomNav } from "../components/BottomNav";
 import { Contact } from "../components/Contact";
 
@@ -21,7 +21,7 @@ export const HomePage = () => {
       <Introduction />
       <LeftSide />
       <AboutMe />
-      <Work />
+      <Projects />
       <Contact />
     </Container>
   );

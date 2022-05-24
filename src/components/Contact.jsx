@@ -69,14 +69,15 @@ export const Contact = () => {
     data-aos-once="false"
     >
         <Wrap>
-            <Name>Contact</Name>
-            <Title>Get In Touch</Title>
+            <Name>Контакт</Name>
+            <Title>Связаться</Title>
             <Description>
-                I’m currently looking for any new opportunities, 
-                my inbox is always open. Whether you have a question or just want to say hi, 
-                I’ll try my best to get back to you!
+            В настоящее время я ищу любые новые возможности, мой почтовый ящик всегда открыт.
+            <br />
+            Если у вас есть вопрос или вы просто хотите сказать привет, я сделаю все возможное, 
+            чтобы ответить вам!
             </Description>
-            <Button><Anchor href="mailto:ismonovmukh@gmail.com">Contact Me</Anchor></Button>
+            <Button><Anchor href="mailto:ismonovmukh@gmail.com">Свяжитесь со мной</Anchor></Button>
         </Wrap>
     </Container>
   )

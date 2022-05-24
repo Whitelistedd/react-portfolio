@@ -3,17 +3,8 @@ import styled from 'styled-components'
 import Project1 from "../images/Base.svg"
 import Project2 from "../images/Reddit.svg"
 import Aos from 'aos';
+import {devices} from "../MediaQueries"
 
-const Container = styled.section`
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 5em;
-    z-index: 1;
-`
-
-const Info = styled.div``
 
 const Title = styled.h3`
     opacity: 0.9;
@@ -21,16 +12,19 @@ const Title = styled.h3`
     color: #65FFDB;
 `
 
+const Info = styled.div``
+
 const CardOne = styled.div`
-    background-image: url(${Project1});
+    background: url(${Project1}) no-repeat center center fixed;
     background-repeat: no-repeat;
     background-size: cover;
 `
 
 const CardTwo = styled.div`
-background-image: url(${Project2});
+background: url(${Project2}) no-repeat center center fixed;
 background-repeat: no-repeat;
 background-size: cover;
+
 `
 
 const CardThree = styled.div`
@@ -43,15 +37,14 @@ const CardContent = styled.div`
     justify-content: flex-end;
     padding: 1em 1em;
     z-index: 1;
-    transform: translateY(50%);
     transition: 600ms ease;
     height: 45vh;
     width: 100%;
     gap: 1em;
     background: 
     linear-gradient(
-        hsl(0 0% 0% / 0) 40%,
-        hsl(20 0% 0% / 0.7) 65%,
+        hsl(0 0% 0% / 0) 10%,
+        hsl(20 0% 0% / 0.7) 45%,
         hsl(0 0% 0% / 1) 100%
       );
       color: white;
@@ -63,7 +56,7 @@ const CardTitle = styled.h4`
     font-size: 25px;
 `
 
-const Projects = styled.div`
+const ProjectsWrap = styled.div`
     display: flex;
     gap: 5em;
     width: 60vw;
@@ -76,10 +69,6 @@ const Projects = styled.div`
         height: 60vh;
         overflow: hidden;
         &:hover {
-            ${CardContent} {
-                transition: 600ms ease;
-                transform: translateY(0%);
-            }
             ${CardTitle} {
                 transition: 300ms ease;
                 transition-delay: 400ms;
@@ -117,12 +106,38 @@ const Button = styled.button`
     }
 `
 
-export const Work = () => {
+const Container = styled.section`
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5em;
+    z-index: 1;
+    @media only screen and (max-width: ${devices.mobile}px) {
+        margin-top: 200px;
+        ${Title} {
+            font-size: 7vw;
+        }
+        ${ProjectsWrap} {
+            width: 90vw;
+        }
+        ${CardContent} {
+            transform: translateY(115%);
+        }
+        ${CardOne}, ${CardTwo}, ${CardThree} {
+            &:hover ${CardContent} {
+                transform: translateY(0%);
+            }
+        }
+    }
+`
+
+export const Projects = () => {
 
     Aos.init();
 
     return (
-        <Container id='Work'
+        <Container id='Projects'
         data-aos="fade-up"
         data-aos-offset="400"
         data-aos-delay="0"
@@ -132,9 +147,9 @@ export const Work = () => {
         data-aos-once="false"
         >
             <Info>
-                <Title>My Main Projects</Title>
+                <Title>Мои основные проекты</Title>
             </Info>
-            <Projects>
+            <ProjectsWrap>
                 <CardOne
                 data-aos="fade-up"
                 data-aos-offset="400"
@@ -147,13 +162,13 @@ export const Work = () => {
                     <CardContent>
                         <CardTitle>Base Ecommerce</CardTitle>
                         <CardDesc>
-                            In this project I have made a MERN React website for a company called Base, I added a payment system, cart system and filtering.
+                            В этом проекте я сделал сайт MERN React для компании Base, добавил платежную систему, систему корзины и фильтрацию.
                         </CardDesc>
                         <CardDesc>
-                            For this Project I used <HL>ReactJS</HL> , <HL>Redux</HL>, <HL>Styled-Components</HL> and
-                            a backend REST API made with <HL>Node</HL>, <HL>ExpressJS</HL> and <HL>MongoDB</HL>.
+                            Для этого проекта я использовал <HL>ReactJS</HL> , <HL>Redux</HL>, <HL>Styled-Components</HL> и бэкэнд 
+                            REST API, созданный с помощью <HL>Node</HL>, <HL>ExpressJS</HL> и <HL>MongoDB</HL>.
                             </CardDesc>
-                        <Button>View Project</Button>
+                        <Button>Посмотреть проект</Button>
                     </CardContent>
                 </CardOne>
                 <CardTwo
@@ -168,14 +183,14 @@ export const Work = () => {
                     <CardContent>
                         <CardTitle>Reddit Clone</CardTitle>
                         <CardDesc>
-                            In this project have went and created a group of friends to make a advanced reddit clone so
-                            not just the homepage but way more features then that.
+                            В этом проекте я пошел и создал группу друзей, чтобы сделать продвинутый клон Reddit,
+                            чтобы не только домашняя страница, но и гораздо больше возможностей, чем это.
                         </CardDesc>
                         <CardDesc>
-                            For this Project We used <HL>ReactJS</HL>, <HL>React-router</HL>, <HL>MaterialUI</HL>,
-                            <HL> Styled-Components</HL>, <HL>Redux</HL> and <HL>Git</HL> to manage and organize between the team.
+                            Для этого проекта мы использовали <HL>ReactJS</HL>, <HL>React-router</HL>, <HL>MaterialUI</HL>,
+                            <HL> Styled-Components</HL>, <HL>Redux</HL> и <HL>Git</HL> для управления и организации работы команды.
                         </CardDesc>
-                        <Button>View Project</Button>
+                        <Button>Посмотреть проект</Button>
                     </CardContent>
                 </CardTwo>
                 <CardThree
@@ -190,17 +205,13 @@ export const Work = () => {
                     <CardContent>
                         <CardTitle>Project 3</CardTitle>
                         <CardDesc>
-                            In this project have went and created a group of friends to make a advanced reddit clone so
-                            not just the homepage but way more features then that.
                         </CardDesc>
                         <CardDesc>
-                            For this Project We used <HL>ReactJS</HL>, <HL>React-router</HL>, <HL>MaterialUI</HL>,
-                            <HL> Styled-Components</HL>, <HL>Redux</HL> and <HL>Git</HL> to manage and organize between the team.
                         </CardDesc>
-                        <Button>View Project</Button>
+                        <Button>Посмотреть проект</Button>
                     </CardContent>
                 </CardThree>
-            </Projects>
+            </ProjectsWrap>
         {/*  <OtherContainer>
                 <SmallProjectOne>
 

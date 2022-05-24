@@ -15,3 +15,8 @@ export const tablet = (props) => {
         }
     `
 }
+
+export const devices = {
+    mobile: 871,
+    tablet: 1200
+}

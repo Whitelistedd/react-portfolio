@@ -45,7 +45,7 @@ const Description = styled.p`
     opacity: 0.7
 `
 
-const Button = styled.button`
+const A = styled.a`
     position: relative;
     padding: 1.25rem 1.75rem;
     font-family: "Space Mono";
@@ -76,15 +76,12 @@ export const Introduction = () => {
     data-aos-once="true"
     >
         <Wrap>
-            <StyledP>Hi, my name is</StyledP>
-            <Name>Muhammad.</Name>
-            <Job>I build things for the web.</Job>
+            <StyledP>Привет, меня зовут</StyledP>
+            <Name>Мухаммед.</Name>
+            <Job>Я создаю вещи для Интернета.</Job>
             <Description>
-                I’m a software engineer specializing in building (and occasionally designing)
-                exceptional digital experiences. Currently,
-                I’m focused on building accessible, human-centered products at Upstatement.
+                Я инженер-программист, специализирующийся на создании (а иногда и разработке) исключительных цифровых приложений.
             </Description>
-            <Button>Check out my projects!</Button>
         </Wrap>
     </Container>
     )

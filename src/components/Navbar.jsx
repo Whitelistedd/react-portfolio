@@ -84,7 +84,7 @@ export const Navbar = () => {
                 <MenuWrap>
                     <Menu onClick={toggleDrawer(true)} />
                     <Drawer
-                    sx={{"& .MuiPaper-root": {justifyContent: "center",alignItems: "center" ,backgroundColor: "#0E192B", width: "40vw",color: "#65FFDB"}}}
+                    sx={{"& .MuiPaper-root": {justifyContent: "center",alignItems: "center" ,backgroundColor: "#0E192B", minWidth: "250px",color: "#65FFDB"}}}
                     anchor={"right"}
                     open={MenuStatus}
                     onClose={toggleDrawer(false)}
@@ -126,9 +126,9 @@ export const Navbar = () => {
                     </Drawer>
                 </MenuWrap>
                 <NavWrap>
-                    <NavItem><A href='#AboutMe'>About</A></NavItem>
-                    <NavItem><A href='#Work'>Work</A></NavItem>
-                    <NavItem><A href='#Contact'>Contact</A></NavItem>
+                    <NavItem><A href='#AboutMe'>Обо мне</A></NavItem>
+                    <NavItem><A href='#Projects'>Работа</A></NavItem>
+                    <NavItem><A href='#Contact'>Контакт</A></NavItem>
                     <Resume>Resume</Resume>
                 </NavWrap>
             </Nav>
