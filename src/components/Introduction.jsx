@@ -45,7 +45,7 @@ const Description = styled.p`
     opacity: 0.7
 `
 
-const A = styled.a`
+/* const A = styled.a`
     position: relative;
     padding: 1.25rem 1.75rem;
     font-family: "Space Mono";
@@ -59,7 +59,7 @@ const A = styled.a`
         background-color: #133040;
         cursor: pointer;
     }
-`
+` */
 
 export const Introduction = () => {
 
