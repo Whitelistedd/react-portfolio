@@ -36,7 +36,7 @@ const Nav = styled.ul`
     color: white;
 `
 
-const Resume = styled.button`
+/* const Resume = styled.button`
     border: 1px solid #65FFDB;
     padding: 0.8em 1.5em;
     color: #65FFDB;
@@ -48,7 +48,7 @@ const Resume = styled.button`
         background-color: #133040;
         cursor: pointer;
     }
-`
+` */
 
 const MenuWrap = styled.div`
     display: none;
@@ -129,7 +129,6 @@ export const Navbar = () => {
                     <NavItem><A href='#AboutMe'>Обо мне</A></NavItem>
                     <NavItem><A href='#Projects'>Работа</A></NavItem>
                     <NavItem><A href='#Contact'>Контакт</A></NavItem>
-                    <Resume>Resume</Resume>
                 </NavWrap>
             </Nav>
         </Container>
