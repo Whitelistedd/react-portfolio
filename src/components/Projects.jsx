@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Project1 from "../images/Base.svg"
 import Project2 from "../images/Reddit.svg"
+import Project3 from "../images/VolxenTracker.svg"
 import Aos from 'aos';
 import {devices} from "../MediaQueries"
 
@@ -28,7 +29,9 @@ background-size: cover;
 `
 
 const CardThree = styled.div`
-background-color: blue;
+background: url(${Project3}) no-repeat fixed;
+background-repeat: no-repeat;
+background-size: cover;
 `
 
 const CardContent = styled.div`
@@ -132,6 +135,22 @@ const Container = styled.section`
     }
 `
 
+/* const A = styled.a`
+    position: relative;
+    padding: 1.25rem 1.75rem;
+    font-family: "Space Mono";
+    background: none;
+    color: #65FFDB;
+    border-radius: 5px;
+    border: 1px solid #65FFDB;
+    transition: 600ms ease;
+    &:hover {
+        transition: 600ms ease;
+        background-color: #133040;
+        cursor: pointer;
+    }
+` */
+
 export const Projects = () => {
 
     Aos.init();
@@ -203,10 +222,19 @@ export const Projects = () => {
                 data-aos-once="false"
                 >
                     <CardContent>
-                        <CardTitle>Project 3</CardTitle>
+                        <CardTitle>Трекер посылок</CardTitle>
                         <CardDesc>
                         </CardDesc>
                         <CardDesc>
+                        В этом проекте я создал сайт, который использует NextJS, Typescript и 
+                        API для отслеживания посылок. Я сделал этот сайт, потому что использовал 
+                        множество сайтов для отслеживания посылок, и некоторые из них не работали должным образом, 
+                        поэтому я сделал свой собственный, 
+                        который использует современные технологии для обновления информации.
+                        </CardDesc>
+                        <CardDesc>
+                        Для этого проекта я использовал NextJS, Typescript, Styled-Components, MaterialUI, SSR 
+                        и небольшой бэкенд API, чтобы я мог скрыть свой ключ API.
                         </CardDesc>
                         <Button>Посмотреть проект</Button>
                     </CardContent>

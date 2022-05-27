@@ -3,7 +3,7 @@ import { Divider, Drawer, List, ListItem,ListItemText } from '@mui/material'
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { mobile } from '../MediaQueries'
-import Logo from "../images/icon.svg"
+import Logo from "../images/iconTab.svg"
 
 
 const Container = styled.div`
