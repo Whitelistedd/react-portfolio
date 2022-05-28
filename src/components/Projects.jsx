@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import Project1 from "../images/Base.svg"
-import Project2 from "../images/Reddit.svg"
-import Project3 from "../images/VolxenTracker.svg"
+import Project3 from "../images/Reddit.svg"
+import Project2 from "../images/VolxenTracker.svg"
 import Aos from 'aos';
 import {devices} from "../MediaQueries"
 
@@ -42,12 +42,13 @@ const CardContent = styled.div`
     z-index: 1;
     transition: 600ms ease;
     height: 45vh;
+    font-weight: 700;
     width: 100%;
     gap: 1em;
     background: 
     linear-gradient(
-        hsl(0 0% 0% / 0) 10%,
-        hsl(20 0% 0% / 0.7) 45%,
+        hsl(0 0% 0% / 0) 0%,
+        hsl(20 0% 0% / 0.6) 30%,
         hsl(0 0% 0% / 1) 100%
       );
       color: white;
@@ -135,21 +136,10 @@ const Container = styled.section`
     }
 `
 
-/* const A = styled.a`
-    position: relative;
-    padding: 1.25rem 1.75rem;
-    font-family: "Space Mono";
-    background: none;
-    color: #65FFDB;
-    border-radius: 5px;
-    border: 1px solid #65FFDB;
-    transition: 600ms ease;
-    &:hover {
-        transition: 600ms ease;
-        background-color: #133040;
-        cursor: pointer;
-    }
-` */
+const A = styled.a`
+color: inherit;
+text-decoration: none;
+`
 
 export const Projects = () => {
 
@@ -187,34 +177,12 @@ export const Projects = () => {
                             Для этого проекта я использовал <HL>ReactJS</HL> , <HL>Redux</HL>, <HL>Styled-Components</HL> и бэкэнд 
                             REST API, созданный с помощью <HL>Node</HL>, <HL>ExpressJS</HL> и <HL>MongoDB</HL>.
                             </CardDesc>
-                        <Button>Посмотреть проект</Button>
+                            <A href='https://basev.vercel.app/' target="_blank" ><Button>Посмотреть проект</Button></A>
                     </CardContent>
                 </CardOne>
                 <CardTwo
                 data-aos="fade-up"
                 data-aos-offset="410"
-                data-aos-delay="0"
-                data-aos-duration="500"
-                data-aos-easing="ease-in-out"
-                data-aos-mirror="false"
-                data-aos-once="false"
-                >
-                    <CardContent>
-                        <CardTitle>Reddit Clone</CardTitle>
-                        <CardDesc>
-                            В этом проекте я пошел и создал группу друзей, чтобы сделать продвинутый клон Reddit,
-                            чтобы не только домашняя страница, но и гораздо больше возможностей, чем это.
-                        </CardDesc>
-                        <CardDesc>
-                            Для этого проекта мы использовали <HL>ReactJS</HL>, <HL>React-router</HL>, <HL>MaterialUI</HL>,
-                            <HL> Styled-Components</HL>, <HL>Redux</HL> и <HL>Git</HL> для управления и организации работы команды.
-                        </CardDesc>
-                        <Button>Посмотреть проект</Button>
-                    </CardContent>
-                </CardTwo>
-                <CardThree
-                data-aos="fade-up"
-                data-aos-offset="420"
                 data-aos-delay="0"
                 data-aos-duration="500"
                 data-aos-easing="ease-in-out"
@@ -235,6 +203,28 @@ export const Projects = () => {
                         <CardDesc>
                         Для этого проекта я использовал NextJS, Typescript, Styled-Components, MaterialUI, SSR 
                         и небольшой бэкенд API, чтобы я мог скрыть свой ключ API.
+                        </CardDesc>
+                        <A href='https://volxenjs.vercel.app/' target="_blank" ><Button>Посмотреть проект</Button></A>
+                    </CardContent>
+                </CardTwo>
+                <CardThree
+                data-aos="fade-up"
+                data-aos-offset="420"
+                data-aos-delay="0"
+                data-aos-duration="500"
+                data-aos-easing="ease-in-out"
+                data-aos-mirror="false"
+                data-aos-once="false"
+                >
+                    <CardContent>
+                        <CardTitle>Reddit Clone</CardTitle>
+                        <CardDesc>
+                            В этом проекте я пошел и создал группу друзей, чтобы сделать продвинутый клон Reddit,
+                            чтобы не только домашняя страница, но и гораздо больше возможностей, чем это.
+                        </CardDesc>
+                        <CardDesc>
+                            Для этого проекта мы использовали <HL>ReactJS</HL>, <HL>React-router</HL>, <HL>MaterialUI</HL>,
+                            <HL> Styled-Components</HL>, <HL>Redux</HL> и <HL>Git</HL> для управления и организации работы команды.
                         </CardDesc>
                         <Button>Посмотреть проект</Button>
                     </CardContent>
