@@ -25,6 +25,10 @@ const NavItem = styled.li`
 const A = styled.a`
     color: white;
     text-decoration: none; 
+    transition: 300ms;
+    &:hover {
+        color: #65FFDB;
+    }
 `
 
 const Nav = styled.ul`

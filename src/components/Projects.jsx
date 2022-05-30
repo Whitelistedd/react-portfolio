@@ -23,6 +23,7 @@ const CardOne = styled.div`
 
 const CardTwo = styled.div`
 background: url(${Project2}) no-repeat center center fixed;
+background-position: top;
 background-repeat: no-repeat;
 background-size: cover;
 
@@ -30,8 +31,10 @@ background-size: cover;
 
 const CardThree = styled.div`
 background: url(${Project3}) no-repeat fixed;
+background-position: top;
 background-repeat: no-repeat;
 background-size: cover;
+letter-spacing: 5px;
 `
 
 const CardContent = styled.div`
@@ -60,6 +63,14 @@ const CardTitle = styled.h4`
     font-size: 25px;
 `
 
+const CardButtons = styled.div`
+    display: flex;
+    gap: 2em;
+    align-items: center;
+    justify-content: flex-start;
+    width: 50%;
+`
+
 const ProjectsWrap = styled.div`
     display: flex;
     gap: 5em;
@@ -76,7 +87,7 @@ const ProjectsWrap = styled.div`
             ${CardTitle} {
                 transition: 300ms ease;
                 transition-delay: 400ms;
-                color: #65FFDB;
+                color: #65FFDC;
             }
         }
     }
@@ -84,9 +95,12 @@ const ProjectsWrap = styled.div`
 
 const CardDesc = styled.p`
     max-width: 100%;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
     line-height: 30px;
+    font-size: 18px;
+    font-weight: 500;
     margin: 0;
+    text-shadow: 1px 1px 10px black;
 `
 
 const HL = styled.span`
@@ -95,10 +109,10 @@ const HL = styled.span`
 
 const Button = styled.button`
     letter-spacing: 1px;
-    font-family: Space Mono;
-    width: 25%;
+    width: 100%;
     padding: 0.8em 0em;
     background: none;
+    font-weight: 700;
     color: #65FFDB;
     border-radius: 5px;
     border: 1px solid #65FFDB;
@@ -136,9 +150,11 @@ const Container = styled.section`
     }
 `
 
-const A = styled.a`
+const Anchor = styled.a`
 color: inherit;
+font-weight: 700;
 text-decoration: none;
+width: 50%;
 `
 
 export const Projects = () => {
@@ -177,7 +193,10 @@ export const Projects = () => {
                             Для этого проекта я использовал <HL>ReactJS</HL> , <HL>Redux</HL>, <HL>Styled-Components</HL> и бэкэнд 
                             REST API, созданный с помощью <HL>Node</HL>, <HL>ExpressJS</HL> и <HL>MongoDB</HL>.
                             </CardDesc>
-                            <A href='https://basev.vercel.app/' target="_blank" ><Button>Посмотреть проект</Button></A>
+                            <CardButtons>
+                            <Anchor href='https://basev.vercel.app/' target="_blank" ><Button>Посмотреть проект</Button></Anchor>
+                            <Anchor href='https://github.com/Whitelistedd/base' target="_blank" ><Button>Посмотреть код</Button></Anchor>
+                            </CardButtons>
                     </CardContent>
                 </CardOne>
                 <CardTwo
@@ -194,17 +213,20 @@ export const Projects = () => {
                         <CardDesc>
                         </CardDesc>
                         <CardDesc>
-                        В этом проекте я создал сайт, который использует NextJS, Typescript и 
+                        В этом проекте я создал сайт, который использует <HL>NextJS</HL>, <HL>Typescript</HL> и 
                         API для отслеживания посылок. Я сделал этот сайт, потому что использовал 
                         множество сайтов для отслеживания посылок, и некоторые из них не работали должным образом, 
                         поэтому я сделал свой собственный, 
                         который использует современные технологии для обновления информации.
                         </CardDesc>
                         <CardDesc>
-                        Для этого проекта я использовал NextJS, Typescript, Styled-Components, MaterialUI, SSR 
-                        и небольшой бэкенд API, чтобы я мог скрыть свой ключ API.
+                        Для этого проекта я использовал <HL>NextJS</HL>, <HL>Typescript</HL>, <HL>Styled-Components</HL>, <HL>MaterialUI</HL>, <HL>SSR </HL> 
+                         и небольшой бэкенд <HL>API</HL>, чтобы я мог скрыть свой ключ API.
                         </CardDesc>
-                        <A href='https://volxenjs.vercel.app/' target="_blank" ><Button>Посмотреть проект</Button></A>
+                        <CardButtons>
+                        <Anchor href='https://volxenjs.vercel.app/' target="_blank" ><Button>Посмотреть проект</Button></Anchor>
+                        <Anchor href='https://github.com/Whitelistedd/parcel-remastered' target="_blank" ><Button>Посмотреть код</Button></Anchor>
+                        </CardButtons>
                     </CardContent>
                 </CardTwo>
                 <CardThree
@@ -217,7 +239,7 @@ export const Projects = () => {
                 data-aos-once="false"
                 >
                     <CardContent>
-                        <CardTitle>Reddit Clone</CardTitle>
+                        <CardTitle>Reddit Clone в разработке</CardTitle>
                         <CardDesc>
                             В этом проекте я пошел и создал группу друзей, чтобы сделать продвинутый клон Reddit,
                             чтобы не только домашняя страница, но и гораздо больше возможностей, чем это.
@@ -226,7 +248,11 @@ export const Projects = () => {
                             Для этого проекта мы использовали <HL>ReactJS</HL>, <HL>React-router</HL>, <HL>MaterialUI</HL>,
                             <HL> Styled-Components</HL>, <HL>Redux</HL> и <HL>Git</HL> для управления и организации работы команды.
                         </CardDesc>
-                        <Button>Посмотреть проект</Button>
+                        <CardButtons>
+                        <Anchor><Button>Посмотреть проект</Button></Anchor>
+                        <Anchor href='https://github.com/Reddit-React-Study-Group/Reddit-React-Study-Project' target="_blank" ><Button>Посмотреть код</Button></Anchor>
+                        </CardButtons>
+
                     </CardContent>
                 </CardThree>
             </ProjectsWrap>
