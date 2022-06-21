@@ -1,16 +1,20 @@
-import {Navbar} from "../components/Navbar"
-import {Introduction} from "../components/Introduction"
-import {AboutMe} from "../components/AboutMe"
-import { LeftSide } from "../components/LeftSide";
-import { RightSide } from "../components/RightSide";
-import styled from "styled-components";
-import { Projects } from "../components/Projects";
-import { BottomNav } from "../components/BottomNav";
-import { Contact } from "../components/Contact";
+import styled from 'styled-components';
+
+import { AboutMe } from '../components/AboutMe';
+import { BottomNav } from '../components/BottomNav';
+import { Contact } from '../components/Contact';
+import { Introduction } from '../components/Introduction';
+import { LeftSide } from '../components/LeftSide';
+import { Navbar } from '../components/Navbar';
+import { Projects } from '../components/Projects';
+import { RightSide } from '../components/RightSide';
 
 const Container = styled.div`
-    height: 500vh;
-`
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 5em;
+`;
 
 export const HomePage = () => {
   return (
@@ -25,4 +29,4 @@ export const HomePage = () => {
       <Contact />
     </Container>
   );
-}
+};

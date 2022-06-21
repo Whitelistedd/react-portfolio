@@ -1,7 +1,33 @@
-import React from 'react'
-import styled from 'styled-components'
-import {mobile} from "../MediaQueries"
+import React from 'react';
+import styled from 'styled-components';
 
+import { devices } from '../MediaQueries';
+
+export const RightSide = () => {
+  return (
+    <Container>
+      <Anchor href="mailto:Volxen@gmail.com">
+        <Email>ismonovmukh@gmail.com</Email>
+      </Anchor>
+    </Container>
+  );
+};
+
+const Anchor = styled.a`
+  color: white;
+  text-decoration: none;
+  transition: 400ms ease;
+  &:hover {
+    color: #65ffdb;
+    transform: translate(0, -10px);
+    transition: 400ms ease;
+    cursor: pointer;
+  }
+`;
+
+const Email = styled.p`
+  writing-mode: vertical-rl;
+`;
 const Container = styled.div`
   display: flex;
   gap: 2em;
@@ -14,38 +40,14 @@ const Container = styled.div`
   color: white;
   letter-spacing: 2px;
   &::after {
-      content: "";
-      display: block;
-      width: 1px;
-      height: 90px;
-      margin: 0px auto;
-      background-color: white;
+    content: "";
+    display: block;
+    width: 1px;
+    height: 90px;
+    margin: 0px auto;
+    background-color: white;
   }
-  ${mobile({display: "none"})}
-`
-
-const Anchor = styled.a`
-  color: white;
-  text-decoration: none;
-  transition: 400ms ease;
-  &:hover {
-    color: #65FFDB;
-    transform: translate(0, -10px);
-    transition: 400ms ease;
-    cursor: pointer;
+  @media only screen and (max-width: ${devices.mobile}px) {
+    display: none;
   }
-`
-
-const Email = styled.p`
-writing-mode: vertical-rl;
-`
-
-export const RightSide = () => {
-  return (
-    <Container>
-      <Anchor href="mailto:Volxen@gmail.com">
-        <Email>ismonovmukh@gmail.com</Email>
-      </Anchor>
-    </Container>
-  )
-}
+`;
