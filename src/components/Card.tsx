@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { devices } from "../MediaQueries";
 
 interface Props {
   image: string,
@@ -68,21 +69,17 @@ const CardContent = styled.div`
 `;
 
 const CardTitle = styled.h4`
-  font-size: 25px;
+  font-size: 1.7em;
 `;
 
 const CardDesc = styled.p`
   max-width: 100%;
   letter-spacing: 1px;
   line-height: 30px;
-  font-size: 18px;
+  font-size: 1.1em;
   font-weight: 500;
   margin: 0;
   text-shadow: 1px 1px 10px black;
-`;
-
-const HL = styled.span`
-  color: #65ffdb;
 `;
 
 const Button = styled.button`
@@ -95,6 +92,7 @@ const Button = styled.button`
   padding: 1.5em 0em;
   border: 1px solid #65ffdb;
   transition: 300ms ease;
+  font-size: 0.8em;
   &:hover {
     transition: 300ms ease;
     background-color: #133040;
@@ -114,4 +112,10 @@ const Container = styled.div`
     border-radius: 10px;
     min-height: 100%;
     padding: 1em;
+
+    @media only screen and (max-width: ${devices.mobile}px) {
+      ${CardContent} {
+        font-size: 13px;
+      }
+    }
 `;

@@ -48,10 +48,11 @@ const Wrap = styled.div`
 
 const Name = styled.h3`
   color: #65ffdb;
+  font-size: 1.3em;
 `;
 
 const Title = styled.h1`
-  font-size: calc(2.5em - 0.2rem);
+  font-size: 2.5em;
 `;
 
 const Description = styled.p`
@@ -60,6 +61,7 @@ const Description = styled.p`
   line-height: 2em;
   min-width: 30vw;
   opacity: 0.8;
+  font-size: 1em;
 `;
 
 const Button = styled.button`
@@ -68,6 +70,7 @@ const Button = styled.button`
   border: 1px solid #65ffdb;
   border-radius: 5px;
   transition: 600ms ease;
+  font-size: 1em;
   &:hover {
     transition: 600ms ease;
     background-color: #133040;
@@ -76,9 +79,10 @@ const Button = styled.button`
 `;
 
 const Anchor = styled.a`
-  font-size: 16px;
+font-size: 1em;
   color: white;
   text-decoration: none;
+
 `;
 
 const Container = styled.section`
@@ -89,6 +93,21 @@ const Container = styled.section`
   @media only screen and (max-width: ${devices.Laptop}px) {
     ${Wrap} {
       width: 70%;
+    }
+  }
+  @media only screen and (max-width: ${devices.Tablet}px) {
+    ${Wrap} {
+      font-size: 11px;
+      word-break: keep-all;
+      white-space: nowrap;
+    }
+  }
+
+  @media only screen and (max-width: ${devices.mobile}px) {
+    ${Wrap} {
+      font-size: 9px;
+      white-space: normal;
+      word-break: break-all;
     }
   }
 `;

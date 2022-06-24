@@ -1,14 +1,14 @@
 import BaseEcommerce from './images/Base.webp';
 import SpaceTourism from './images/SpaceTourism.webp';
 import VolxenTracker from './images/VolxenTracker.webp';
-import CSS from "../images/css3-alt-brands.svg";
-import GIT from "../images/git-alt-brands.svg";
-import HTML5 from "../images/html5-brands.svg";
-import JS from "../images/js-brands.svg";
-import MongoDB from "../images/mongoDB.svg";
-import NODE from "../images/node-js-brands.svg";
-import REACT from "../images/react-brands.svg";
-import TS from "../images/typescript.svg";
+import CSS from "./images/css3-alt-brands.svg";
+import GIT from "./images/git-alt-brands.svg";
+import HTML5 from "./images/html5-brands.svg";
+import JS from "./images/js-brands.svg";
+import MongoDB from "./images/mongoDB.svg";
+import NODE from "./images/node-js-brands.svg";
+import REACT from "./images/react-brands.svg";
+import TS from "./images/typescript.svg";
 
 export const Cards = [
     {

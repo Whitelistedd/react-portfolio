@@ -9,14 +9,7 @@ import { devices } from '../MediaQueries';
 export const Navbar : React.FC = () => {
   const [MenuStatus, setMenuStatus] = useState(false);
 
-  const toggleDrawer = (open : boolean) => (event : KeyboardEvent<HTMLInputElement>) => {
-    if (
-      event.type === "keydown" &&
-      (event.key === "Tab" || event.key === "Shift")
-    ) {
-      return;
-    }
-
+  const toggleDrawer = (open : boolean) => {
     setMenuStatus(open);
   };
 
@@ -39,7 +32,7 @@ export const Navbar : React.FC = () => {
             }}
             anchor={"right"}
             open={MenuStatus}
-            onClose={toggleDrawer(false)}
+            onClose={() => toggleDrawer(false)}
           >
             <List>
               <ListItem button>
@@ -77,23 +70,6 @@ export const Navbar : React.FC = () => {
               </ListItem>
             </List>
             <Divider />
-            <List>
-              <ListItem
-                sx={{
-                  border: "1px solid #65FFDB",
-                  padding: "0.8em 1.5em",
-                  color: "#65FFDB",
-                  background: "none",
-                  borderRadius: "5px",
-                }}
-                button
-              >
-                <ListItemText
-                  sx={{ xs: { textAlign: "center" } }}
-                  primary={"Resume"}
-                />
-              </ListItem>
-            </List>
           </Drawer>
         </MenuWrap>
         <NavWrap>
