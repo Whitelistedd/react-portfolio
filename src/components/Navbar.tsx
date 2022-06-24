@@ -1,6 +1,6 @@
 import { Menu } from '@mui/icons-material';
 import { Divider, Drawer, List, ListItem, ListItemText } from '@mui/material';
-import React, { useState } from 'react';
+import React, { KeyboardEvent, useState } from 'react';
 import styled from 'styled-components';
 
 import Logo from '../images/iconTab.svg';
@@ -9,7 +9,7 @@ import { devices } from '../MediaQueries';
 export const Navbar = () => {
   const [MenuStatus, setMenuStatus] = useState(false);
 
-  const toggleDrawer = (open) => (event) => {
+  const toggleDrawer = (open : boolean) => (event : KeyboardEvent<HTMLInputElement>) => {
     if (
       event.type === "keydown" &&
       (event.key === "Tab" || event.key === "Shift")
@@ -26,7 +26,7 @@ export const Navbar = () => {
 
       <Nav>
         <MenuWrap>
-          <Menu onClick={toggleDrawer(true)} />
+          <Menu onClick={() => toggleDrawer(true)} />
           <Drawer
             sx={{
               "& .MuiPaper-root": {

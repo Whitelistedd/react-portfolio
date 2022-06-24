@@ -1,21 +1,12 @@
-import Aos from 'aos';
-import React from 'react';
-import styled from 'styled-components';
+import Aos from "aos";
+import React from "react";
+import styled from "styled-components";
+import { languages } from "../data";
 
-import CSS from '../images/css3-alt-brands.svg';
-import GIT from '../images/git-alt-brands.svg';
-import HTML5 from '../images/html5-brands.svg';
-import JS from '../images/js-brands.svg';
-import MongoDB from '../images/mongoDB.svg';
-import NODE from '../images/node-js-brands.svg';
-import REACT from '../images/react-brands.svg';
-import codingIMG from '../images/Saly-10.svg';
-import TS from '../images/typescript.svg';
-import { devices } from '../MediaQueries';
+import codingIMG from "../images/Saly-10.svg";
+import { devices } from "../MediaQueries";
 
-const languages = [HTML5, CSS, JS, GIT, TS, MongoDB, NODE, REACT];
-
-export const AboutMe = () => {
+export const AboutMe : React.FC = () => {
   Aos.init();
 
   return (
@@ -32,9 +23,6 @@ export const AboutMe = () => {
       <Wrap>
         <Info>
           <Title>Обо мне</Title>
-          <StyledP>
-            Привет! Меня зовут Мохаммед, я фронтенд-разработчик.
-          </StyledP>
           <StyledP>
             Я работаю фронтенд-разработчиком уже 2 года, специализируюсь на
             ReactJS и немного на Typescript. Мой основной стек — MERN с ReactJS
