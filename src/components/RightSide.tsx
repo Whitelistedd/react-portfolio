@@ -3,10 +3,10 @@ import styled from 'styled-components';
 
 import { devices } from '../MediaQueries';
 
-export const RightSide = () => {
+export const RightSide : React.FC = () => {
   return (
     <Container>
-      <Anchor href="mailto:Volxen@gmail.com">
+      <Anchor href="mailto:ismonovmukh@gmail.com">
         <Email>ismonovmukh@gmail.com</Email>
       </Anchor>
     </Container>

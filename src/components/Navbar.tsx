@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import Logo from '../images/iconTab.svg';
 import { devices } from '../MediaQueries';
 
-export const Navbar = () => {
+export const Navbar : React.FC = () => {
   const [MenuStatus, setMenuStatus] = useState(false);
 
   const toggleDrawer = (open : boolean) => (event : KeyboardEvent<HTMLInputElement>) => {

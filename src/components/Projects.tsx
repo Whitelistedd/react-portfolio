@@ -2,12 +2,6 @@ import Aos from 'aos';
 import React from 'react';
 import styled from 'styled-components';
 import { Cards } from '../data';
-
-import Project1Image from '../images/Base.svg';
-import Project5Image from '../images/Reddit.svg';
-import Project4Image from '../images/SpaceTourism.svg';
-import Project2Image from '../images/VolxenTracker.svg';
-import Project3Image from '../images/VolxFlix.svg';
 import { devices } from '../MediaQueries';
 import { Card } from './Card';
 

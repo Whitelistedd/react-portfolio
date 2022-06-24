@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import { devices } from '../MediaQueries';
 
-export const Contact = () => {
+export const Contact : React.FC = () => {
   Aos.init();
 
   return (
