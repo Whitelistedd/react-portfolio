@@ -55,8 +55,10 @@ const Container = styled.section`
   justify-content: center;
   flex-direction: column;
   gap: 5em;
-  z-index: 1;
   min-height: 50%;
+  * {
+    z-index: 1;
+  }
   @media only screen and (max-width: ${devices.Laptop}px) {
     ${ProjectsWrap} {
       width: 70%;

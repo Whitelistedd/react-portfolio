@@ -38,6 +38,9 @@ const Wrap = styled.div`
   gap: 2.5vh;
   justify-content: center;
   align-items: flex-start;
+  * {
+    z-index: 1;
+  }
 `;
 
 const StyledP = styled.p`

@@ -44,6 +44,9 @@ const Wrap = styled.div`
   text-align: center;
   color: white;
   gap: 4vh;
+  * {
+    z-index: 1;
+  }
 `;
 
 const Name = styled.h3`

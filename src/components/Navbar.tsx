@@ -125,6 +125,7 @@ const NavWrap = styled.div`
   height: 7vh;
   gap: 2em;
   color: white;
+
 `;
 
 const Container = styled.div`
@@ -132,6 +133,9 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 0em 3.3em;
+  * {
+    z-index: 1;
+  }
   @media only screen and (max-width: ${devices.mobile}px) {
     ${NavWrap} {
       display: none;
