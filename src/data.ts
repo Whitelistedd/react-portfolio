@@ -1,6 +1,8 @@
 import BaseEcommerce from './images/Base.webp';
 import SpaceTourism from './images/SpaceTourism.webp';
 import VolxenTracker from './images/VolxenTracker.webp';
+import ReactBookLibrary from "./images/React-book-library.webp"
+
 import CSS from "./images/css3-alt-brands.svg";
 import GIT from "./images/git-alt-brands.svg";
 import HTML5 from "./images/html5-brands.svg";
@@ -33,9 +35,9 @@ export const Cards = [
         code: "https://github.com/Whitelistedd/parcel-remastered",
     },
     {
-        images: SpaceTourism,
+        images: ReactBookLibrary,
         title: "React Book Library",
-        desc: "В этом проекте я сделал сайт MERN React для компании Base, добавилплатежную систему, систему корзины и фильтрацию. Для этого проекта я использовал ReactJS , Redux, Styled-Components и бэкэнд REST API, созданный с помощью Node, ExpressJS и MongoDB.",
+        desc: "В этом проекте я создал библиотеку книг, которая может искать книги в API книг Google и фильтровать их с помощью сортировки и категорий, а также имеет кнопку «Загрузить больше», чтобы загружать больше книг. Я сделал это с помощью ReactJS, Styled-components и Typescript.",
         live: "https://react-book-library.vercel.app/",
         code: "https://github.com/Whitelistedd/book-library",
     },
