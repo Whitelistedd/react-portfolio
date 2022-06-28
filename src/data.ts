@@ -16,7 +16,7 @@ export const Cards = [
     {
         images: BaseEcommerce,
         title: "Base Ecommerce",
-        desc: "В этом проекте я сделал сайт MERN React для компании Base, добавилплатежную систему, систему корзины и фильтрацию. Для этого проекта я использовал ReactJS , Redux, Styled-Components и бэкэнд REST API, созданный с помощью Node, ExpressJS и MongoDB.",
+        desc: "В этом проекте я сделал сайт MERN React для компании Base, добавилплатежную систему, систему корзины, Yandex Metrica и фильтрацию. Для этого проекта я использовал ReactJS , Redux, Styled-Components и бэкэнд REST API, созданный с помощью Node, ExpressJS и MongoDB.",
         live: "https://base-shop.vercel.app/",
         code: "https://github.com/Whitelistedd/base",
     },
