@@ -2,11 +2,13 @@ import BaseEcommerce from './images/Base.webp';
 import SpaceTourism from './images/SpaceTourism.webp';
 import VolxenTracker from './images/VolxenTracker.webp';
 import ReactBookLibrary from "./images/React-book-library.webp"
+import TodoApp from "./images/TodoApp.webp"
+import AsterNews from "./images/aster-news.webp"
 
-import CSS from "./images/css3-alt-brands.svg";
+import Redux from "./images/redux.svg";
 import GIT from "./images/git-alt-brands.svg";
-import HTML5 from "./images/html5-brands.svg";
-import JS from "./images/js-brands.svg";
+import Next from "./images/next-js.svg";
+import Tailwind from "./images/tailwind-css.svg";
 import MongoDB from "./images/mongoDB.svg";
 import NODE from "./images/node-js-brands.svg";
 import REACT from "./images/react-brands.svg";
@@ -16,7 +18,7 @@ export const Cards = [
     {
         images: BaseEcommerce,
         title: "Base Ecommerce",
-        desc: "В этом проекте я сделал сайт MERN React для компании Base, добавилплатежную систему, систему корзины, Yandex Metrica и фильтрацию. Для этого проекта я использовал ReactJS , Redux, Styled-Components и бэкэнд REST API, созданный с помощью Node, ExpressJS и MongoDB.",
+        desc: "В этом проекте я сделал приложение для покупки одежды MERN React, добавил платежную систему, систему корзины покупок, Яндекс Метрику и фильтрацию, а также сделал RestAPI для выполнения CRUD-операций и MongoDB для хранения всех данных о товарах и заказах. Для этого проекта я использовал ReactJS, Redux, Styled-Components, Yandex Metrika и бэкэнд REST API, созданный с помощью Node, ExpressJS и MongoDB.",
         live: "https://base-shop.vercel.app/",
         code: "https://github.com/Whitelistedd/base",
     },
@@ -41,6 +43,20 @@ export const Cards = [
         live: "https://react-book-library.vercel.app/",
         code: "https://github.com/Whitelistedd/book-library",
     },
+    {
+        images: AsterNews,
+        title: "Aster News",
+        desc: "В этом проекте я создал новостное приложение с последними новостями и различными категориями новостей. Я сделал это с помощью ReactJS, Styled-Components, Typescript, Redux Toolkit и NewsAPI.",
+        live: "https://asternews.vercel.app/",
+        code: "https://github.com/Whitelistedd/aster-news",
+    },
+    {
+        images: TodoApp,
+        title: "Todo App",
+        desc: "В этом проекте я создал приложение для управления вашими задачами, сохранения статуса их выполнения и добавления/удаления задач. Я использовал его с помощью ReactJS, Typescript, Redux-Toolkit и Styled-Components.",
+        live: "https://todolist-pp.vercel.app/",
+        code: "https://github.com/Whitelistedd/todo-app",
+    },
 ]
 
-export const languages = [HTML5, CSS, JS, GIT, TS, MongoDB, NODE, REACT];
+export const languages = [Next, Redux, Tailwind, GIT, TS, MongoDB, NODE, REACT];

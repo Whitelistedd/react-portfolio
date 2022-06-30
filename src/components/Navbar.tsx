@@ -1,6 +1,6 @@
 import { Menu } from '@mui/icons-material';
 import { Divider, Drawer, List, ListItem, ListItemText } from '@mui/material';
-import React, { KeyboardEvent, useState } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import Logo from '../images/iconTab.svg';
@@ -132,10 +132,12 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  width: 100%;
   padding: 0em 3.3em;
-  * {
-    z-index: 1;
-  }
+  z-index: 2;
+  background: #0a182e;
+  box-shadow: 0px 1px 50px #0a182e;
   @media only screen and (max-width: ${devices.mobile}px) {
     ${NavWrap} {
       display: none;

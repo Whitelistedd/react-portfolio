@@ -80,7 +80,6 @@ const StyledP = styled.p`
   opacity: 1;
   width: calc(30vw + 10%);
   margin: 0.3em 0em;
-  text-shadow: 0px 0px 10px white;
 `;
 
 const Image = styled.img`
@@ -103,7 +102,6 @@ const Images = styled.div`
 
 const Language = styled.img`
   width: 30px;
-  filter: drop-shadow( 3px 3px 5px black);
 `;
 
 const Container = styled.section`
