@@ -108,6 +108,7 @@ const Container = styled.section`
   display: flex;
   justify-content: center;
   min-height: 50%;
+
   @media only screen and (max-width: ${devices.Laptop}px) {
     ${StyledP} {
       font-size: 0.9em;

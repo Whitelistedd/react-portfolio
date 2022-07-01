@@ -1,4 +1,3 @@
-import Aos from 'aos';
 import React from 'react';
 import styled from 'styled-components';
 import { Cards } from '../data';
@@ -6,18 +5,12 @@ import { devices } from '../MediaQueries';
 import { Card } from './Card';
 
 export const Projects : React.FC = () => {
-  Aos.init();
 
   return (
     <Container
       id="Projects"
-      data-aos="fade-up"
-      data-aos-offset="400"
-      data-aos-delay="0"
-      data-aos-duration="500"
-      data-aos-easing="ease-in-out"
-      data-aos-mirror="false"
-      data-aos-once="false"
+      data-aos="fade-up" 
+      data-aos-anchor-placement="top-center"
     >
       <Info>
         <Title>Мои проекты</Title>

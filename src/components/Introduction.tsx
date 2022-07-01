@@ -5,7 +5,6 @@ import styled from 'styled-components';
 import { devices } from '../MediaQueries';
 
 export const Introduction : React.FC = () => {
-  Aos.init();
 
   return (
     <Container
@@ -72,7 +71,7 @@ const Description = styled.p`
 const Container = styled.section`
   display: flex;
   justify-content: center;
-  height: 80vh;
+  height: 100vh;
   @media only screen and (max-width: ${devices.Laptop}px) {
     width: 100%;
     ${Wrap} {

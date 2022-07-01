@@ -1,4 +1,5 @@
 import BaseEcommerce from './images/Base.webp';
+import BaseDashboard from './images/baseDashboard.webp';
 import SpaceTourism from './images/SpaceTourism.webp';
 import VolxenTracker from './images/VolxenTracker.webp';
 import ReactBookLibrary from "./images/React-book-library.webp"
@@ -18,6 +19,13 @@ export const Cards = [
     {
         images: BaseEcommerce,
         title: "Base Ecommerce",
+        desc: "В этом проекте я сделал приложение для покупки одежды MERN React, добавил платежную систему, систему корзины покупок, Яндекс Метрику и фильтрацию, а также сделал RestAPI для выполнения CRUD-операций и MongoDB для хранения всех данных о товарах и заказах. Для этого проекта я использовал ReactJS, Redux, Styled-Components, Yandex Metrika и бэкэнд REST API, созданный с помощью Node, ExpressJS и MongoDB.",
+        live: "https://base-shop.vercel.app/",
+        code: "https://github.com/Whitelistedd/base",
+    },
+    {
+        images: BaseDashboard,
+        title: "Base Admin Dashboard (в разработке)",
         desc: "В этом проекте я сделал приложение для покупки одежды MERN React, добавил платежную систему, систему корзины покупок, Яндекс Метрику и фильтрацию, а также сделал RestAPI для выполнения CRUD-операций и MongoDB для хранения всех данных о товарах и заказах. Для этого проекта я использовал ReactJS, Redux, Styled-Components, Yandex Metrika и бэкэнд REST API, созданный с помощью Node, ExpressJS и MongoDB.",
         live: "https://base-shop.vercel.app/",
         code: "https://github.com/Whitelistedd/base",

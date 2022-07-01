@@ -10,9 +10,6 @@ export const LeftSide = () => {
       <Anchor target="_blank" href="https://github.com/Whitelistedd">
         <GitHub />
       </Anchor>
-      <Anchor target="_blank" href="https://linkedin.com/">
-        <LinkedIn />
-      </Anchor>
     </Container>
   );
 };

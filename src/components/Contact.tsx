@@ -1,22 +1,16 @@
-import Aos from 'aos';
 import React from 'react';
 import styled from 'styled-components';
 
 import { devices } from '../MediaQueries';
 
 export const Contact : React.FC = () => {
-  Aos.init();
+
 
   return (
     <Container
       id="Contact"
-      data-aos="fade-up"
-      data-aos-offset="700"
-      data-aos-delay="0"
-      data-aos-duration="1000"
-      data-aos-easing="ease-in-out"
-      data-aos-mirror="false"
-      data-aos-once="false"
+      data-aos="fade-up" 
+      data-aos-anchor-placement="top-center"
     >
       <Wrap>
         <Name>Контакт</Name>

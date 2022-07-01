@@ -14,12 +14,11 @@ export const Card : React.FC<Props> = ({image,title,desc,live,code}) => {
   return (
   <Container
     data-aos="fade-up"
-    data-aos-offset="400"
     data-aos-delay="0"
-    data-aos-duration="500"
+    data-aos-duration="1000"
     data-aos-easing="ease-in-out"
     data-aos-mirror="false"
-    data-aos-once="false"
+    data-aos-once="true"
   >
     <Image src={image} />
     <CardContent>
@@ -112,6 +111,7 @@ const Container = styled.div`
     border-radius: 10px;
     min-height: 100%;
     padding: 1em;
+    background: #0A182E;
 
     @media only screen and (max-width: ${devices.mobile}px) {
       ${CardContent} {
