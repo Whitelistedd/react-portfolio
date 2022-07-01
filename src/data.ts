@@ -26,7 +26,7 @@ export const Cards = [
     {
         images: BaseDashboard,
         title: "Base Admin Dashboard (в разработке)",
-        desc: "В этом проекте я сделал приложение для покупки одежды MERN React, добавил платежную систему, систему корзины покупок, Яндекс Метрику и фильтрацию, а также сделал RestAPI для выполнения CRUD-операций и MongoDB для хранения всех данных о товарах и заказах. Для этого проекта я использовал ReactJS, Redux, Styled-Components, Yandex Metrika и бэкэнд REST API, созданный с помощью Node, ExpressJS и MongoDB.",
+        desc: "В этом проекте я создал панель администратора для своего проекта электронной коммерции, чтобы управлять всеми продуктами, пользователями и сведениями о доходах. Для этого проекта я использовал React, Typescript, MUI, React-Router, Styled-Components и Recharts для графиков.",
         live: "https://base-shop.vercel.app/",
         code: "https://github.com/Whitelistedd/base",
     },
