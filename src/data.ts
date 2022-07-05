@@ -18,7 +18,7 @@ import TS from "./images/typescript.svg";
 export const Cards = [
     {
         images: BaseEcommerce,
-        title: "Base Ecommerce",
+        title: "Fullstack Base Ecommerce",
         desc: "В этом проекте я сделал приложение для покупки одежды MERN React, добавил платежную систему, систему корзины покупок, Яндекс Метрику и фильтрацию, а также сделал RestAPI для выполнения CRUD-операций и MongoDB для хранения всех данных о товарах и заказах. Для этого проекта я использовал ReactJS, Redux, Styled-Components, Yandex Metrika и бэкэнд REST API, созданный с помощью Node, ExpressJS и MongoDB.",
         live: "https://base-shop.vercel.app/",
         code: "https://github.com/Whitelistedd/Base-Ecommerce",
