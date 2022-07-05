@@ -1,0 +1,51 @@
+{
+    "navbar": {
+        "Item1": "About Me",
+        "Item2": "Work",
+        "Item3": "Contact"
+    },
+    "introduction": {
+        "welcome": "Hello, My name is",
+        "name": "Muhammad.",
+        "title": "I create websites on the internet",
+        "subtitle": "I am a Frontend Developer specializing in creating and developing exceptional websites/web applications."
+    },
+    "about_me": {
+        "location": "About me",
+        "part1": "I have been working as a front-end developer for 2 years, specializing in ReactJS and Typescript. My main stack is MERN with ReactJS or NextJS and I enjoy working with a team. I have been fully focused on developing my skills every day and these days I have been focusing on building beautiful and clean websites with ReactJS. and typescript.",
+        "part2": "I look forward to working with any company and taking the company forward with new technologies and new languages."
+    },
+    "projects": {
+        "location": "My Projects",
+        "project1": {
+            "description": "In this project, I made an Ecommerce application with the stack MERN React, added a payment system, a shopping cart system, Yandex Metrics to get users activity data and product filtering, and also made a RestAPI to perform CRUD operations and MongoDB for storing all data about the products and orders. For this project, I used ReactJS, Redux, Styled-Components, Yandex Metrika, and a REST API backend built with Node, ExpressJS, and MongoDB."
+        },
+        "project2": {
+            "description": "In this project, I created an admin panel for my e-commerce project to manage all products, users, and revenue details. For this project, I used React, Typescript, MUI, React-Router, Styled-Components and Recharts for charts."
+        },
+        "project3": {
+            "description": "In this project, I made a React website that talks about space and some planets in the solar system. I made this project because I was interested in space and was happy to show people the space world in a site. For this project i used ReactJS, Typescript, React-router, StyledComponents and Figma for design."
+        },
+        "project4": {
+            "description": "I made this website because I have used a lot of tracking websites and some of them didn't work properly, so I made my own which uses modern technologies to update the information. For this project I used NextJS, Typescript, Styled-Components, MaterialUI , SSR, and a small API backend so I can hide my API key."
+        },
+        "project5": {
+            "description": "In this project, I created a book library that can search for books in the Google Books API and filter them with sorting and categories, and has a Load More button to download more books. For this project I used ReactJS, Styled-components and Typescript."
+        },
+        "project6": {
+            "description": "In this project, I have created a news app with breaking news and different categories of news. For this project I used ReactJS, Styled-Components, Typescript, Redux Toolkit and NewsAPI."
+        },
+        "project7": {
+            "description": "In this project, I created an application to manage your tasks, save their progress status, and add/remove tasks. For this project I used ReactJS, Typescript, Redux-Toolkit and Styled-Components."
+        },
+        "see_project_button": "View Code",
+        "see_projectCode_button": "Live Website"
+    },
+    "contact_me": {
+        "location": "Contact",
+        "title": "Contact Me",
+        "description1": "I am currently looking for any new opportunities, my mailbox is always open.",
+        "description2": "If you have a question or just want to say hello, I will do my best to answer you!",
+        "button": "Contact Me Now!"
+    }
+}

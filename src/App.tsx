@@ -1,6 +1,6 @@
 import { HomePage } from "./pages/HomePage"
 import "aos/dist/aos.css"
-import { useEffect } from "react";
+import { Suspense, useEffect } from "react";
 import Aos from "aos";
 
 function App() {
@@ -10,7 +10,9 @@ function App() {
   },[])
 
   return (
-    <HomePage />
+    <Suspense fallback={null} >
+      <HomePage />
+    </Suspense>
   );
 }
 

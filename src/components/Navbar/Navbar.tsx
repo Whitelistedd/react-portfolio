@@ -1,13 +1,16 @@
 import { Menu } from '@mui/icons-material';
 import { Divider, Drawer, List, ListItem, ListItemText } from '@mui/material';
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 
-import Logo from '../images/iconTab.svg';
-import { devices } from '../MediaQueries';
+import { devices } from '../../MediaQueries';
+import { LanguageMenu } from './LanguageMenu/LanguageMenu';
 
 export const Navbar : React.FC = () => {
   const [MenuStatus, setMenuStatus] = useState(false);
+
+  const { t } = useTranslation();
 
   const toggleDrawer = (open : boolean) => {
     setMenuStatus(open);
@@ -15,11 +18,11 @@ export const Navbar : React.FC = () => {
 
   return (
     <Container>
-      <Image src={Logo} />
+      <LanguageMenu />
 
       <Nav>
         <MenuWrap>
-          <Menu onClick={() => toggleDrawer(true)} />
+          <HamburgerMenuIcon onClick={() => toggleDrawer(true)} />
           <Drawer
             sx={{
               "& .MuiPaper-root": {
@@ -34,11 +37,12 @@ export const Navbar : React.FC = () => {
             open={MenuStatus}
             onClose={() => toggleDrawer(false)}
           >
+            <Divider />
             <List>
               <ListItem button>
                 <ListItemText
                   sx={{ xs: { textAlign: "center" } }}
-                  primary={"Home"}
+                  primary={t('navbar.Item1')}
                 />
               </ListItem>
             </List>
@@ -47,7 +51,7 @@ export const Navbar : React.FC = () => {
               <ListItem button>
                 <ListItemText
                   sx={{ xs: { textAlign: "center" } }}
-                  primary={"About"}
+                  primary={t('navbar.Item2')}
                 />
               </ListItem>
             </List>
@@ -56,16 +60,7 @@ export const Navbar : React.FC = () => {
               <ListItem button>
                 <ListItemText
                   sx={{ xs: { textAlign: "center" } }}
-                  primary={"Work"}
-                />
-              </ListItem>
-            </List>
-            <Divider />
-            <List>
-              <ListItem button>
-                <ListItemText
-                  sx={{ xs: { textAlign: "center" } }}
-                  primary={"Contact"}
+                  primary={t('navbar.Item3')}
                 />
               </ListItem>
             </List>
@@ -74,23 +69,19 @@ export const Navbar : React.FC = () => {
         </MenuWrap>
         <NavWrap>
           <NavItem>
-            <A href="#AboutMe">Обо мне</A>
+            <A href="#AboutMe">{t('navbar.Item1')}</A>
           </NavItem>
           <NavItem>
-            <A href="#Projects">Работа</A>
+            <A href="#Projects">{t('navbar.Item2')}</A>
           </NavItem>
           <NavItem>
-            <A href="#Contact">Контакт</A>
+            <A href="#Contact">{t('navbar.Item3')}</A>
           </NavItem>
         </NavWrap>
       </Nav>
     </Container>
   );
 };
-
-const Image = styled.img`
-  width: 35px;
-`;
 
 const NavItem = styled.li`
   letter-spacing: 1px;
@@ -115,6 +106,8 @@ const Nav = styled.ul`
   color: white;
 `;
 
+const HamburgerMenuIcon = styled(Menu)``
+
 const MenuWrap = styled.div`
   display: none;
 `;
@@ -124,7 +117,6 @@ const NavWrap = styled.div`
   align-items: center;
   height: 7vh;
   gap: 2em;
-  color: white;
 
 `;
 
@@ -138,6 +130,8 @@ const Container = styled.div`
   z-index: 2;
   background: #0a182e;
   box-shadow: 0px 1px 50px #0a182e;
+  color: white;
+
   @media only screen and (max-width: ${devices.mobile}px) {
     ${NavWrap} {
       display: none;

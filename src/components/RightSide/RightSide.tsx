@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { devices } from '../MediaQueries';
+import { devices } from '../../MediaQueries';
 
 export const RightSide : React.FC = () => {
   return (

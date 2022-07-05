@@ -1,13 +1,16 @@
 import Aos from "aos";
 import React from "react";
+import { useTranslation } from "react-i18next";
 import styled from "styled-components";
-import { languages } from "../data";
 
-import codingIMG from "../images/Saly-10.svg";
-import { devices } from "../MediaQueries";
+import { languages } from "../../data";
+import codingIMG from "../../images/Saly-10.svg";
+import { devices } from "../../MediaQueries";
 
 export const AboutMe : React.FC = () => {
   Aos.init();
+
+  const { t } = useTranslation();
 
   return (
     <Container
@@ -22,17 +25,9 @@ export const AboutMe : React.FC = () => {
     >
       <Wrap>
         <Info>
-          <Title>Обо мне</Title>
-          <StyledP>
-            Работаю фронтенд-разработчиком 2 года, специализируюсь на ReactJS и Typescript. Мой основной стек — это MERN с ReactJS или NextJS, 
-            и мне нравится работать с командой. Я полностью сосредоточился на развитии своих навыков каждый день, 
-            и в эти дни я сосредоточился на создании красивых и чистых веб-сайтов с помощью ReactJS. и Typescript.
-          </StyledP>
-          <StyledP>
-            Я с нетерпением жду возможности работать с любой компанией и
-            продвигать компанию вперед с помощью новых технологий и новых
-            языков.
-          </StyledP>
+          <Title>{t('about_me.location')}</Title>
+          <StyledP>{t('about_me.part1')}</StyledP>
+          <StyledP>{t('about_me.part2')}</StyledP>
           <Images>
             {languages.map((item) => (
               <Language src={item} />
@@ -136,16 +131,17 @@ const Container = styled.section`
     }
     ${StyledP} {
       width: 100%;
-      text-align: center;
       font-size: 0.8em;
     }
     ${Info} {
       width: 80vw;
-      align-items: center;
     }
     ${Wrap} {
       flex-direction: column;
       gap: 4rem;
+    }
+    ${Images} {
+      width: 100%;
     }
   }
 `;

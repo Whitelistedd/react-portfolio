@@ -1,10 +1,12 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 
-import { devices } from '../MediaQueries';
+import { devices } from '../../MediaQueries';
 
 export const Contact : React.FC = () => {
 
+  const { t } = useTranslation();
 
   return (
     <Container
@@ -13,17 +15,15 @@ export const Contact : React.FC = () => {
       data-aos-anchor-placement="top-center"
     >
       <Wrap>
-        <Name>Контакт</Name>
-        <Title>Связаться</Title>
+        <Name>{t("contact_me.location")}</Name>
+        <Title>{t("contact_me.title")}</Title>
         <Description>
-          В настоящее время я ищу любые новые возможности, мой почтовый ящик
-          всегда открыт.
+          {t("contact_me.description1")}
           <br />
-          Если у вас есть вопрос или вы просто хотите сказать привет, я сделаю
-          все возможное, чтобы ответить вам!
+          {t("contact_me.description2")}
         </Description>
         <Button>
-          <Anchor href="mailto:ismonovmukh@gmail.com">Свяжитесь со мной</Anchor>
+          <Anchor href="mailto:ismonovmukh@gmail.com">{t("contact_me.button")}</Anchor>
         </Button>
       </Wrap>
     </Container>

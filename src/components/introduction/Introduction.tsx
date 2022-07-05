@@ -1,10 +1,12 @@
-import Aos from 'aos';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 
-import { devices } from '../MediaQueries';
+import { devices } from '../../MediaQueries';
 
 export const Introduction : React.FC = () => {
+
+  const { t } = useTranslation()
 
   return (
     <Container
@@ -18,13 +20,10 @@ export const Introduction : React.FC = () => {
       data-aos-once="true"
     >
       <Wrap>
-        <StyledP>Привет, меня зовут</StyledP>
-        <Name>Мухаммед.</Name>
-        <Job>Я создаю сайты для Интернета.</Job>
-        <Description>
-          Я Frontend-разработчик, специализирующийся на создании 
-          и разработке исключительных веб-сайтов/веб-приложений.
-        </Description>
+        <StyledP>{t('introduction.welcome')}</StyledP>
+        <Name>{t('introduction.name')}</Name>
+        <Job>{t('introduction.title')}</Job>
+        <Description>{t('introduction.subtitle')}</Description>
       </Wrap>
     </Container>
   );
@@ -37,23 +36,20 @@ const Wrap = styled.div`
   gap: 2.5vh;
   justify-content: center;
   align-items: flex-start;
-  * {
-    z-index: 1;
-  }
 `;
 
 const StyledP = styled.p`
-  font-size: calc(0.1vw + 1em);
+  font-size: 1.2em;
   color: #65ffdb;
 `;
 
 const Name = styled.h1`
-  font-size: calc(3vw + 2em);
+  font-size: 5em;
   color: white;
 `;
 
 const Job = styled.h2`
-  font-size: calc(2.5vw + 1em);
+  font-size: 3.2em;
   word-spacing: -1vw;
   margin: 0;
   color: white;
@@ -62,7 +58,7 @@ const Job = styled.h2`
 
 const Description = styled.p`
   max-width: calc(40vw + 40%);
-  font-size: calc(0.5vw + 1em);
+  font-size: 1.5em;
   word-spacing: -3px;
   color: white;
   opacity: 0.7;
@@ -72,15 +68,25 @@ const Container = styled.section`
   display: flex;
   justify-content: center;
   height: 100vh;
+  @media only screen and (max-width: ${devices.Desktop}px) {
+    ${Wrap} {
+      font-size: 12px;
+    }
+  }
   @media only screen and (max-width: ${devices.Laptop}px) {
     width: 100%;
     ${Wrap} {
       width: 70%;
+      font-size: 9px;
     }
   }
-  @media only screen and (max-width: ${devices.mobile}) {
+  @media only screen and (max-width: ${devices.mobile}px) {
     ${Wrap} {
-      min-width: 70vh;
+      width: 80%;
+      font-size: 8px;
+    }
+    ${Job} {
+      font-size: 2em;
     }
   }
 `;

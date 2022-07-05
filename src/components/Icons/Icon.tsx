@@ -2,7 +2,7 @@ import React from 'react'
 import { FaReact, FaHtml5, FaCss3Alt, FaJs, FaNode, FaGit } from "react-icons/fa";
 import styled, { keyframes } from 'styled-components';
 
-export const Icon = ({className} : {className?: string}) => {
+export const Icon : React.FC = ({className} : {className?: string}) => {
   return (
     <IconWrap className={className} >
         <FaReact />

@@ -1,10 +1,14 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
-import { Cards } from '../data';
-import { devices } from '../MediaQueries';
-import { Card } from './Card';
+
+import { Cards } from '../../data';
+import { devices } from '../../MediaQueries';
+import { Card } from './Card/Card';
 
 export const Projects : React.FC = () => {
+
+  const { t } = useTranslation()
 
   return (
     <Container
@@ -13,12 +17,12 @@ export const Projects : React.FC = () => {
       data-aos-anchor-placement="top-center"
     >
       <Info>
-        <Title>Мои проекты</Title>
+        <Title>{t('projects.location')}</Title>
       </Info>
       <ProjectsWrap>
         {
           Cards.map(card => 
-            <Card image={card.images} title={card.title} desc={card.desc} live={card.live} code={card.code} />  
+            <Card translate={t} key={card.title} image={card.images} title={card.title} desc={card.desc} live={card.live} code={card.code} />  
           )
         }
       </ProjectsWrap>
@@ -65,11 +69,4 @@ const Container = styled.section`
       width: 90vw;
     }
   }
-`;
-
-const Anchor = styled.a`
-  color: inherit;
-  font-weight: 700;
-  text-decoration: none;
-  width: 50%;
 `;

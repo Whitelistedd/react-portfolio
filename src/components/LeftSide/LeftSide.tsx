@@ -1,8 +1,8 @@
-import { GitHub, LinkedIn } from '@mui/icons-material';
+import { GitHub } from '@mui/icons-material';
 import React from 'react';
 import styled from 'styled-components';
 
-import { devices } from '../MediaQueries';
+import { devices } from '../../MediaQueries';
 
 export const LeftSide = () => {
   return (

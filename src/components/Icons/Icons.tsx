@@ -1,10 +1,11 @@
-import { Icon } from "./Icon";
 import React from 'react'
 import styled, { keyframes } from 'styled-components';
-import { devices } from "../MediaQueries";
+
+import { Icon } from "./Icon";
+import { devices } from "../../MediaQueries";
 const iteration = [...Array(12)]
 
-export const Icons = () => {
+export const Icons : React.FC = () => {
   return (
     <IconsContainer>
         {
@@ -61,13 +62,12 @@ const IconRow = styled.div`
 `
 
 const IconsContainer = styled.div`
-  position: fixed;
   width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  z-index: 0;
+  position: fixed;
   
   @media only screen and (max-width: ${devices.mobile}px) {
     display: none;

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { devices } from "../MediaQueries";
+
+import { devices } from "../../../MediaQueries";
 
 interface Props {
   image: string,
@@ -8,9 +9,10 @@ interface Props {
   desc: string,
   live: string,
   code: string,
+  translate: any
 }
 
-export const Card : React.FC<Props> = ({image,title,desc,live,code}) => {
+export const Card : React.FC<Props> = ({image,title,desc,live,code,translate}) => {
   return (
   <Container
     data-aos="fade-up"
@@ -23,18 +25,16 @@ export const Card : React.FC<Props> = ({image,title,desc,live,code}) => {
     <Image src={image} />
     <CardContent>
       <CardTitle>{title}</CardTitle>
-      <CardDesc>
-        {desc}
-      </CardDesc>
+      <CardDesc>{translate(`projects.${desc}.description`)}</CardDesc>
       <CardButtons>
         <Anchor href={live} target="_blank">
-          <Button>Посмотреть проект</Button>
+          <Button>{translate(`projects.see_project_button`)}</Button>
         </Anchor>
         <Anchor
           href={code}
           target="_blank"
         >
-          <Button>Посмотреть код</Button>
+          <Button>{translate(`projects.see_projectCode_button`)}</Button>
         </Anchor>
       </CardButtons>
     </CardContent>
@@ -115,7 +115,7 @@ const Container = styled.div`
 
     @media only screen and (max-width: ${devices.mobile}px) {
       ${CardContent} {
-        font-size: 13px;
+        font-size: 10px;
       }
     }
 `;
