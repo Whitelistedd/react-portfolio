@@ -18,7 +18,7 @@
     "projects": {
         "location": "My Projects",
         "project1": {
-            "description": "In this project, I made an Ecommerce application with the stack MERN React, added a payment system, a shopping cart system, Yandex Metrics to get users activity data and product filtering, a RestAPI, CRUD operations and MongoDB for storing all data about the products and orders. For this project, I used ReactJS, Redux, Styled-Components, Yandex Metrika, and a REST API backend built with Node, ExpressJS, and MongoDB."
+            "description": "In this project, I made a Ecommerce store for a person that wanted to sell clothes, added a payment system, a shopping cart system, Yandex Metrics to get users activity data and product filtering, a RestAPI, CRUD operations and MongoDB for storing all data about the products and orders. For this project, I used ReactJS, Redux, Styled-Components, Yandex Metrika, and a REST API backend built with Node, ExpressJS, and MongoDB."
         },
         "project2": {
             "description": "In this project, I created an admin panel for my e-commerce project to manage all products, users, and revenue details. For this project, I used React, Typescript, MUI, React-Router, Styled-Components and Recharts for charts."
