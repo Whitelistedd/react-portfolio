@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
+import Typewriter from 'typewriter-effect';
 
 import { devices } from '../../MediaQueries';
 
@@ -22,7 +23,15 @@ export const Introduction : React.FC = () => {
       <Wrap>
         <StyledP>{t('introduction.welcome')}</StyledP>
         <Name>{t('introduction.name')}</Name>
-        <Job>{t('introduction.title')}</Job>
+        <Job>
+          <Typewriter
+            options={{
+              strings: [`${t('introduction.title1')} Front-end Developer`, `${t('introduction.title1')} Fullstack Developer`],
+              autoStart: true,
+              loop: true,
+            }}
+          />
+          </Job>
         <Description>{t('introduction.subtitle')}</Description>
       </Wrap>
     </Container>
@@ -54,6 +63,7 @@ const Job = styled.h2`
   margin: 0;
   color: white;
   opacity: 0.7;
+  display: flex;
 `;
 
 const Description = styled.p`
