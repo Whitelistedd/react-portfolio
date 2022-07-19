@@ -20,7 +20,7 @@ export const Cards = [
         images: BaseEcommerce,
         title: "Fullstack Base Ecommerce",
         desc: "project1",
-        live: "https://base-shop.vercel.app/version",
+        live: "https://base-ecommerce.vercel.app/",
         code: "https://github.com/Whitelistedd/Base-Ecommerce",
     },
     {
